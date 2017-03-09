@@ -4,7 +4,7 @@ import express from 'express'
 
 import React from 'react'
 import { renderToString } from 'react-dom/server'
-import App from './components/app'
+// import App from './components/app'
 
 const log = debug('server')
 
@@ -15,11 +15,11 @@ server.set('views', path.resolve(__dirname, 'html'))
 server.set('view engine', 'pug')
 
 server.get('/', (req, res) => {
-  const html = renderToString(<App />)
+  // const html = renderToString(<App />)
 
   res.render('index', {
     pageTitle: 'Universal Webpack',
-    pageHtml: html
+    pageHtml: '<h1>Bundled by webpack</h1>' // html
   })
 })
 
