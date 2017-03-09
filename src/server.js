@@ -9,6 +9,7 @@ import App from './components/app'
 const log = debug('server')
 
 const server = express()
+server.use('/css', express.static('node_modules/normalize-css'))
 server.set('views', path.resolve(__dirname, 'html'))
 server.set('view engine', 'pug')
 
