@@ -10,6 +10,7 @@ const log = debug('server')
 
 const server = express()
 server.use('/css', express.static('node_modules/normalize-css'))
+server.use('/images', express.static(path.resolve(__dirname, 'images')))
 server.set('views', path.resolve(__dirname, 'html'))
 server.set('view engine', 'pug')
 
